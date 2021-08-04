@@ -1,0 +1,19 @@
+<template>
+  <h1>连续款</h1>
+  <div class="grid">
+    <div class="continuous-1"></div>
+    <div class="continuous-2"></div>
+    <div class="continuous-3"></div>
+    <div class="continuous-4"></div>
+    <div class="continuous-5"></div>
+    <div class="continuous-6"></div>
+    <div class="continuous-7"></div>
+    <div class="continuous-8"></div>
+    <div class="continuous-9"></div>
+    <div class="continuous-10"></div>
+  </div>
+</template>
+
+<style scoped>
+@import './style.css';
+</style>
