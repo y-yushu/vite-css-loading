@@ -1,16 +1,298 @@
+<script setup>
+import { ElMessage } from 'element-plus'
+import useClipboard from 'vue-clipboard3'
+const { toClipboard } = useClipboard()
+
+const download = text => {
+  toClipboard(text)
+  ElMessage({
+    message: '复制成功',
+    type: 'success'
+  })
+}
+
+const hypnotic_1 = () => {
+  download(`.hypnotic-1 {
+    width: 50px;
+    height: 50px;
+    border: 2px solid;
+    display: grid;
+    animation: h1 4s infinite linear;
+}
+
+.hypnotic-1::before,
+.hypnotic-1::after {
+    content: "";
+    grid-area: 1/1;
+    margin: auto;
+    width: 70.7%;
+    height: 70.7%;
+    border: 2px solid;
+    animation: inherit;
+}
+
+.hypnotic-1::after {
+    width: 50%;
+    height: 50%;
+    border: 2px solid;
+    animation-duration: 2s;
+}
+
+@keyframes h1 {
+    100% {
+        transform: rotate(1turn)
+    }
+}`)
+}
+const hypnotic_2 = () => {
+  download(`.hypnotic-2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid;
+    position: relative;
+    transform-origin: left;
+    animation: h2 1s infinite linear;
+}
+
+.hypnotic-2::before,
+.hypnotic-2::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    border: 2px solid;
+    transform-origin: 50% calc(100% - 4px);
+    animation: inherit;
+}
+
+.hypnotic-2::after {
+    inset: auto 0 calc(100% + 2px);
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+    transform-origin: 50% calc(200% - 2px);
+}
+
+@keyframes h2 {
+    100% {
+        transform: rotate(1turn)
+    }
+}`)
+}
+const hypnotic_3 = () => {
+  download(`.hypnotic-3 {
+    width: 50px;
+    height: 50px;
+    border: 2px solid;
+    background:
+        conic-gradient(from -90deg at calc(100% - 2px) calc(100% - 2px), #0000 0 90deg, currentColor 0),
+        conic-gradient(from -90deg at calc(100% - 2px) calc(100% - 2px), #0000 0 90deg, currentColor 0);
+    background-size: 16px 16px;
+    background-position: 0 0;
+    animation: h3 1s infinite;
+}
+
+@keyframes h3 {
+    100% {
+        background-position: -16px -16px, 16px 16px
+    }
+}`)
+}
+const hypnotic_4 = () => {
+  download(`.hypnotic-4 {
+    width: 50px;
+    height: 50px;
+    border: 2px solid;
+    background:
+        radial-gradient(farthest-side, #0000 calc(100% - 3px), currentColor calc(100% - 2px) 98%, #0000),
+        radial-gradient(farthest-side, #0000 calc(100% - 3px), currentColor calc(100% - 2px) 98%, #0000);
+    background-size: 23px 23px;
+    background-position: 0 0, 12px 12px;
+    animation: h4 1s infinite;
+}
+
+@keyframes h4 {
+    100% {
+        background-position: -23px 0px, 12px 35px
+    }
+}`)
+}
+const hypnotic_5 = () => {
+  download(`.hypnotic-5 {
+    width: 50px;
+    height: calc(50px*0.866);
+    display: grid;
+    background:
+        linear-gradient(to bottom left, #0000 calc(50% - 1px), currentColor 0 calc(50% + 1px), #0000 0) right/50% 100%,
+        linear-gradient(to bottom right, #0000 calc(50% - 1px), currentColor 0 calc(50% + 1px), #0000 0) left /50% 100%,
+        linear-gradient(currentColor 0 0) bottom/100% 2px;
+    background-repeat: no-repeat;
+    transform-origin: 50% 66%;
+    animation: h5 4s infinite linear;
+}
+
+.hypnotic-5::before,
+.hypnotic-5::after {
+    content: "";
+    grid-area: 1/1;
+    background: inherit;
+    transform-origin: inherit;
+    animation: inherit;
+}
+
+.hypnotic-5::after {
+    animation-duration: 2s;
+}
+
+@keyframes h5 {
+    100% {
+        transform: rotate(1turn)
+    }
+}`)
+}
+const hypnotic_6 = () => {
+  download(`.hypnotic-6 {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    background:
+        linear-gradient(90deg, currentColor 2px, #0000 0 calc(100% - 2px), currentColor 0) center/100% 14px,
+        linear-gradient(0deg, currentColor 2px, #0000 0 calc(100% - 2px), currentColor 0) center/14px 100%,
+        linear-gradient(currentColor 0 0) center/100% 2px,
+        linear-gradient(currentColor 0 0) center/2px 100%;
+    background-repeat: no-repeat;
+    animation: h6 4s infinite linear;
+}
+
+.hypnotic-6::before,
+.hypnotic-6::after {
+    content: "";
+    grid-area: 1/1;
+    background: inherit;
+    transform-origin: inherit;
+    animation: inherit;
+}
+
+.hypnotic-6::after {
+    animation-duration: 2s;
+}
+
+@keyframes h6 {
+    100% {
+        transform: rotate(1turn)
+    }
+}`)
+}
+const hypnotic_7 = () => {
+  download(`.hypnotic-7 {
+    width: 50px;
+    height: 50px;
+    border: 2px solid;
+    background:
+        repeating-conic-gradient(#0000 0 90deg, currentColor 0 180deg),
+        repeating-conic-gradient(currentColor 0 90deg, #0000 0 180deg);
+    background-size: 16px 16px;
+    background-position: 0 0;
+    animation: h7 2s infinite;
+}
+
+@keyframes h7 {
+    100% {
+        background-position: 0px 32px, 16px 0px
+    }
+}`)
+}
+const hypnotic_8 = () => {
+  download(`.hypnotic-8 {
+    width: 50px;
+    height: 50px;
+    border: 2px solid;
+    background:
+        radial-gradient(farthest-side, currentColor 90%, #0000),
+        radial-gradient(farthest-side, #0000 90%, currentColor);
+    background-size: 16px 16px;
+    background-position: 0 0;
+    animation: h8 2s infinite;
+}
+
+@keyframes h8 {
+    100% {
+        background-position: 0px 32px, -16px 0
+    }
+}`)
+}
+const hypnotic_9 = () => {
+  download(`.hypnotic-9 {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 50%;
+    background: repeating-conic-gradient(#0000, currentColor 1deg 18deg, #0000 20deg 36deg);
+    animation: h9 4s infinite linear;
+}
+
+.hypnotic-9::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 0;
+    background: inherit;
+    animation: inherit;
+}
+
+@keyframes h9 {
+    100% {
+        transform: rotate(.5turn)
+    }
+}`)
+}
+const hypnotic_10 = () => {
+  download(`.hypnotic-10 {
+    width: 50px;
+    height: 50px;
+    display: grid;
+}
+
+.hypnotic-10::before,
+.hypnotic-10::after {
+    content: "";
+    grid-area: 1/1;
+    border-radius: 50%;
+    background: repeating-conic-gradient(#0000, currentColor 1deg 18deg, #0000 20deg 36deg);
+    -webkit-mask: repeating-radial-gradient(farthest-side, #000 0 10%, #0000 0 20%);
+    mask: repeating-radial-gradient(farthest-side, #000 0 10%, #0000 0 20%);
+    animation: h10 4s infinite linear;
+}
+
+.hypnotic-10::after {
+    -webkit-mask: repeating-radial-gradient(farthest-side, #0000 0 10%, #000 0 20%);
+    mask: repeating-radial-gradient(farthest-side, #0000 0 10%, #000 0 20%);
+    animation-direction: reverse;
+}
+
+@keyframes h10 {
+    100% {
+        transform: rotate(.5turn)
+    }
+}`)
+}
+</script>
 <template>
   <h1>催眠款</h1>
   <div class="grid">
-    <div class="hypnotic-1"></div>
-    <div class="hypnotic-2"></div>
-    <div class="hypnotic-3"></div>
-    <div class="hypnotic-4"></div>
-    <div class="hypnotic-5"></div>
-    <div class="hypnotic-6"></div>
-    <div class="hypnotic-7"></div>
-    <div class="hypnotic-8"></div>
-    <div class="hypnotic-9"></div>
-    <div class="hypnotic-10"></div>
+    <div class="hypnotic-1" @click="hypnotic_1()" />
+    <div class="hypnotic-2" @click="hypnotic_2()" />
+    <div class="hypnotic-3" @click="hypnotic_3()" />
+    <div class="hypnotic-4" @click="hypnotic_4()" />
+    <div class="hypnotic-5" @click="hypnotic_5()" />
+    <div class="hypnotic-6" @click="hypnotic_6()" />
+    <div class="hypnotic-7" @click="hypnotic_7()" />
+    <div class="hypnotic-8" @click="hypnotic_8()" />
+    <div class="hypnotic-9" @click="hypnotic_9()" />
+    <div class="hypnotic-10" @click="hypnotic_10()" />
   </div>
 </template>
 

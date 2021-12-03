@@ -1,16 +1,328 @@
+<script setup>
+import { ElMessage } from 'element-plus'
+import useClipboard from 'vue-clipboard3'
+const { toClipboard } = useClipboard()
+
+const download = text => {
+  toClipboard(text)
+  ElMessage({
+    message: '复制成功',
+    type: 'success'
+  })
+}
+
+const dome1 = () => {
+  download(`.spinner-1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: repeating-conic-gradient(#000 0 90deg, #ccc 0 180deg);
+  animation: s1 1s infinite linear;
+}
+
+@keyframes s1 {
+  100% {
+    transform: rotate(.5turn)
+  }
+}`)
+}
+const dome2 = () => {
+  download(`
+.spinner-2 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  border-radius: 50%;
+  background: conic-gradient(#25b09b 25%, #f03355 0 50%, #514b82 0 75%, #ffa516 0);
+  animation: s2 2s infinite linear;
+}
+
+.spinner-2::before,
+.spinner-2::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 15%;
+  border-radius: 50%;
+  background: inherit;
+  animation: inherit;
+}
+
+.spinner-2::after {
+  margin: 25%;
+  animation-duration: 3s;
+}
+
+@keyframes s2 {
+  100% {
+    transform: rotate(1turn)
+  }
+}`)
+}
+const dome3 = () => {
+  download(`
+.spinner-3 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  border-radius: 50%;
+  -webkit-mask: radial-gradient(farthest-side, #0000 40%, #000 41%);
+  mask: radial-gradient(farthest-side, #0000 40%, #000 41%);
+  background:
+    linear-gradient(0deg, rgb(0 0 0/50%) 50%, rgb(0 0 0/100%) 0) center/4px 100%,
+    linear-gradient(90deg, rgb(0 0 0/25%) 50%, rgb(0 0 0/75%) 0) center/100% 4px;
+  background-repeat: no-repeat;
+  animation: s3 1s infinite steps(12);
+}
+
+.spinner-3::before,
+.spinner-3::after {
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.915;
+  transform: rotate(30deg);
+}
+
+.spinner-3::after {
+  opacity: 0.83;
+  transform: rotate(60deg);
+}
+
+@keyframes s3 {
+  100% {
+    transform: rotate(1turn)
+  }
+}`)
+}
+const dome4 = () => {
+  download(`
+.spinner-4 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 8px solid #0000;
+  border-right-color: #ffa50097;
+  position: relative;
+  animation: s4 1s infinite linear;
+}
+
+.spinner-4:before,
+.spinner-4:after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: inherit;
+  animation: inherit;
+  animation-duration: 2s;
+}
+
+.spinner-4:after {
+  animation-duration: 4s;
+}
+
+@keyframes s4 {
+  100% {
+    transform: rotate(1turn)
+  }
+}`)
+}
+const dome5 = () => {
+  download(`
+.spinner-5 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #514b82;
+  -webkit-mask: radial-gradient(circle closest-side at 50% 40%, #0000 94%, #000);
+  mask: radial-gradient(circle closest-side at 50% 40%, #0000 94%, #000);
+  transform-origin: 50% 40%;
+  animation: s5 1s infinite linear;
+}
+
+@keyframes s5 {
+  100% {
+    transform: rotate(1turn)
+  }
+}`)
+}
+const dome6 = () => {
+  download(`
+.spinner-6 {
+  width: 40px;
+  height: 10px;
+  color: #f03355;
+  background:
+    radial-gradient(farthest-side, currentColor 90%, #0000) left /10px 10px,
+    radial-gradient(farthest-side, currentColor 90%, #0000) center/10px 10px,
+    radial-gradient(farthest-side, currentColor 90%, #0000) right /10px 10px,
+    linear-gradient(currentColor 0 0) center/100% 4px;
+  background-repeat: no-repeat;
+  position: relative;
+  animation: s6 2s infinite linear;
+}
+
+.spinner-6:before,
+.spinner-6:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  animation: inherit;
+  --s: calc(50% - 5px);
+  animation-direction: reverse;
+}
+
+.spinner-6:after {
+  --s: calc(5px - 50%);
+}
+
+@keyframes s6 {
+  0% {
+    transform: translate(var(--s, 0)) rotate(0)
+  }
+
+  100% {
+    transform: translate(var(--s, 0)) rotate(1turn)
+  }
+}`)
+}
+const dome7 = () => {
+  download(`
+.spinner-7 {
+  --d: 22px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  color: #25b09b;
+  box-shadow:
+    calc(1*var(--d)) calc(0*var(--d)) 0 0,
+    calc(0.707*var(--d)) calc(0.707*var(--d)) 0 1px,
+    calc(0*var(--d)) calc(1*var(--d)) 0 2px,
+    calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+    calc(-1*var(--d)) calc(0*var(--d)) 0 4px,
+    calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+    calc(0*var(--d)) calc(-1*var(--d)) 0 6px;
+  animation: s7 1s infinite steps(8);
+}
+
+@keyframes s7 {
+  100% {
+    transform: rotate(1turn)
+  }
+}`)
+}
+const dome8 = () => {
+  download(`
+.spinner-8 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  color: #514b82;
+  background:
+    linear-gradient(currentColor 0 0) center/100% 3px,
+    linear-gradient(currentColor 0 0) center/3px 100%;
+  background-repeat: no-repeat;
+  animation: s8 2s infinite;
+}
+
+.spinner-8::before,
+.spinner-8::after {
+  content: "";
+  grid-area: 1/1;
+  background: repeating-conic-gradient(#0000 0 35deg, currentColor 0 90deg);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 3px), #000 0);
+  mask: radial-gradient(farthest-side, #0000 calc(100% - 3px), #000 0);
+  border-radius: 50%;
+}
+
+.spinner-8::after {
+  margin: 20%;
+}
+
+@keyframes s8 {
+  100% {
+    transform: rotate(1turn)
+  }
+}`)
+}
+const dome9 = () => {
+  download(`
+.spinner-9 {
+  --s: 8px;
+  width: 50px;
+  height: 50px;
+  background: orange;
+  border-radius: 50%;
+  animation: s9 2s infinite linear;
+  clip-path: polygon(0 0, calc(50% - var(--s)) 0, 50% var(--s), calc(50% + var(--s)) 0, 100% 0, 100% calc(50% - var(--s)), calc(100% - var(--s)) 50%, 100% calc(50% + var(--s)), 100% 100%, calc(50% + var(--s)) 100%, 50% calc(100% - var(--s)), calc(50% - var(--s)) 100%, 0 100%, 0 calc(50% + var(--s)), var(--s) 50%, 0 calc(50% - var(--s)));
+}
+
+@keyframes s9 {
+  100% {
+    transform: rotate(1turn)
+  }
+}`)
+}
+const dome0 = () => {
+  download(`
+.spinner-10 {
+  --R: 30px;
+  --g1: #514b82 96%, #0000;
+  --g2: #eeeeee 96%, #0000;
+  width: calc(2*var(--R));
+  height: calc(2*var(--R));
+  border-radius: 50%;
+  display: grid;
+  -webkit-mask: linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0);
+  animation: s10 2s infinite linear;
+}
+
+.spinner-10::before,
+.spinner-10::after {
+  content: "";
+  grid-area: 1/1;
+  width: 50%;
+  background:
+    radial-gradient(farthest-side, var(--g1)) calc(var(--R) + 0.866*var(--R) - var(--R)) calc(var(--R) - 0.5*var(--R) - var(--R)),
+    radial-gradient(farthest-side, var(--g1)) calc(var(--R) + 0.866*var(--R) - var(--R)) calc(var(--R) - 0.5*var(--R) - var(--R)),
+    radial-gradient(farthest-side, var(--g2)) calc(var(--R) + 0.5*var(--R) - var(--R)) calc(var(--R) - 0.866*var(--R) - var(--R)),
+    radial-gradient(farthest-side, var(--g1)) 0 calc(-1*var(--R)),
+    radial-gradient(farthest-side, var(--g2)) calc(var(--R) - 0.5*var(--R) - var(--R)) calc(var(--R) - 0.866*var(--R) - var(--R)),
+    radial-gradient(farthest-side, var(--g1)) calc(var(--R) - 0.866*var(--R) - var(--R)) calc(var(--R) - 0.5*var(--R) - var(--R)),
+    radial-gradient(farthest-side, var(--g2)) calc(-1*var(--R)) 0,
+    radial-gradient(farthest-side, var(--g1)) calc(var(--R) - 0.866*var(--R) - var(--R)) calc(var(--R) + 0.5*var(--R) - var(--R));
+  background-size: calc(2*var(--R)) calc(2*var(--R));
+  background-repeat: no-repeat;
+}
+
+.spinner-10::after {
+  transform: rotate(180deg);
+  transform-origin: right;
+}
+
+@keyframes s10 {
+  100% {
+    transform: rotate(-1turn)
+  }
+}`)
+}
+</script>
 <template>
   <h1>旋转动画款-3</h1>
   <div class="grid">
-    <div class="spinner-1"></div>
-    <div class="spinner-2"></div>
-    <div class="spinner-3"></div>
-    <div class="spinner-4"></div>
-    <div class="spinner-5"></div>
-    <div class="spinner-6"></div>
-    <div class="spinner-7"></div>
-    <div class="spinner-8"></div>
-    <div class="spinner-9"></div>
-    <div class="spinner-10"></div>
+    <div class="spinner-1" @click="dome1()" />
+    <div class="spinner-2" @click="dome2()" />
+    <div class="spinner-3" @click="dome3()" />
+    <div class="spinner-4" @click="dome4()" />
+    <div class="spinner-5" @click="dome5()" />
+    <div class="spinner-6" @click="dome6()" />
+    <div class="spinner-7" @click="dome7()" />
+    <div class="spinner-8" @click="dome8()" />
+    <div class="spinner-9" @click="dome9()" />
+    <div class="spinner-10" @click="dome0()" />
   </div>
 </template>
 
