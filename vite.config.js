@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     outDir: 'docs'
   },
-  base: '/vite-loading/',
+  base: '/vite-css-loading/',
   plugins: [vue()]
   // publicPath: '/vite-loading/'
 })
